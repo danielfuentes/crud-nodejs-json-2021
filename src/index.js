@@ -3,8 +3,16 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 
+//Requerir nuestro middleware - Aplicación
+const mantenimiento = require('./middlewares/mantenimiento');
+
+
 //Para indicarle express la carpeta donde se encuentran los archivos estáticos
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
+
+//app.use(mantenimiento);
+
+
 //Debemos indicar cual es el motor de plantillas que estamos usando EJS
 app.set('view engine','ejs');
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
