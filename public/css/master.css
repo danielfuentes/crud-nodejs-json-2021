@@ -156,6 +156,11 @@ p{
     z-index: 100;
 }
 
+.avatar{
+    width: 10%;
+}
+
+
 /*Media Queries*/
 @media (min-width:768px){
     /*Aquí incorporo el comportameinto Flexible*/
