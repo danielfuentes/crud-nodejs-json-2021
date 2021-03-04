@@ -14,7 +14,7 @@ const controllersUser = {
     registro: function(req,res){
         res.render(path.resolve(__dirname, '../views/usuarios/registro'));
     },
-    create: (req, res, next) => {
+    create: (req, res) => {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         let user = {

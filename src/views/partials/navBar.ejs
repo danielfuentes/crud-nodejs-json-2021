@@ -8,7 +8,9 @@
       <ul class="opciones">
           <li><a href="/">Inicio</a></li>
           <li><a href="/productos">Productos</a></li>
-          <li><a href="/administrar">Administrar</a></li>
+          <% if(locals.usuario.role == 9){%>
+            <li><a href="/administrar">Administrar</a></li>
+          <% } %>  
       </ul>
 
       <ul class="opciones">
